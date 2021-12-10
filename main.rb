@@ -1,11 +1,11 @@
-require './enumberable'
+require_relative './enumberable'
 
 class MyList
-  include MyEnumberable
+  include  MyEnumberable
 
   def initialize (*list)
     @list = list
-    # print  @list
+    # p  @list
   end
 
   def list
@@ -14,12 +14,12 @@ class MyList
 end
 
 
-list = MyList.new(1, 3, 5)
+list = MyList.new(1, 2, 3, 4)
+# puts list.list
 
-# p list.list
-
-puts [1, 2, 3, 4].all? {|e| e > 5}
+puts list.list.all? {|e| e > 5}
 puts list.list.all? {|e| e > 5}
 
 puts list.list.any? {|e| e == 2}
-puts list.any? {|e| e == 5}
+puts list.list.any? {|e| e == 5}
+
