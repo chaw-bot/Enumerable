@@ -1,10 +1,22 @@
-require_relative './enumerable'
+require './enumberable'
 
 class MyList
-  include MyEnumerable
-  @list = []
+  include MyEnumberable
 
-  def each
-    yield
+  def initialize (*list)
+    @list = list
+    # print  @list
+  end
+
+  def list
+    @list
   end
 end
+
+
+list = MyList.new(1, 3, 5)
+
+# p list.list
+
+
+
