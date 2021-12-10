@@ -15,4 +15,3 @@ module MyEnumberable
     results
   end
 end
-
