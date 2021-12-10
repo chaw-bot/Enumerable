@@ -14,5 +14,4 @@ module MyEnumberable
     each { |item| results << element if yield item }
     results
   end
-
 end
