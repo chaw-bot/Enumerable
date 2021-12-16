@@ -1,7 +1,7 @@
 module MyEnumberable
   def all?
     each do |item| 
-      return true unless yield item
+      return true if yield item
       true
     end
   end
